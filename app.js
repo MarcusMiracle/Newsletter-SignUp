@@ -7,7 +7,7 @@ const { options } = require("request");
 
 const app = express();
 
-app.use(express.static("public"))
+app.use(express.static(__dirname))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get("/", function (req, res) {
